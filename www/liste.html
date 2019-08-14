@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="img/Starfleet_command_emblem.png" class="logoStarfleet" />
+                <a class="navbar-brand" href="#" class="link42">Application StarFleet</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Accueil</a></li>
+                <li><a href="liste.html">Liste Equipage</a></li>
+                <li><a href="contact.html">Nouvel Arrivant</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="tab-content">
+        <table class="table" id="liste_contacts">
+            <caption id="title"></caption>
+
+            <tbody id="tbody">
+                <!-- lignes insérées dynamiquement -->
+            </tbody>
+            <tfoot>
+                <!-- pied de page inséré dynamiquement -->
+            </tfoot>
+        </table>
+    </div>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <form id="modifyForm" method="POST" action="#">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modify Contact</h4>
+                    </div>
+                    <div class="modal-body" id="popup">
+                        <p>Modifiez les données et validez</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="btn_valid_modify" class="btn btn-primary">Valider</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- type="text/javascript" src="bootstrap/js/jquery.js"></script-->
+    <!--script type="text/javascript" src="bootstrap/js/bootstrap.js"></script-->
+
+    <script type="text/javascript" src="js/bootstrap.native/dist/bootstrap-native.js"></script>
+    <script type="text/javascript" src="js/lib/socket.io.js"></script>
+    <script type="text/javascript" src="js/liste.js"></script>
+
+</body>
+
+</html>
